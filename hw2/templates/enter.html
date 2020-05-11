@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+	<h2> Enter Movie Review </h2>
+		<form action="{{ url_for('enter') }}" method=post>
+			<p class="heading">Title: <input type=text name=title>
+			<p class="heading">Year Released: <input type=text name=year>
+			<p class="heading">Genre: <input type=text name=genre>
+
+			<p class="heading">Rating (1-5): <input type=number name=rating min=1 max=5>
+			<p class="heading">Reviewer: <input type=text name=name>
+			<p class="heading">Review:
+				<textarea rows=5 cols=50 name=review></textarea></p>
+			<p><input type=submit value=Enter></p>
+		</form>
+{% endblock %}
+

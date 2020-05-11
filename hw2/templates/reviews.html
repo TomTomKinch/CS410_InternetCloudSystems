@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h2> Reviews </h2>
+
+	{% for entry in entries %}
+		<p class=entry> Title: {{ entry.title }} <br> 
+		Year: {{ entry.year }} <br> Genre: {{ entry.genre }} <br> 
+		Rating: {{ entry.rating  }} /5 <br>
+		Reviewer: {{ entry.name }} <br> Reviewed on: {{ entry.the_date }} <br>
+		Review: {{ entry.review }} </p>
+	{% endfor %}
+
+{% endblock %}
